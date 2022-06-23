@@ -35,7 +35,7 @@
 #include "../library/Library.h"
 #include "../library/FlatImage.h"
 
-#include "../../XTIDE_Universal_BIOS/Inc/Version.inc"
+#include "Version.inc"
 
 const char *bannerStrings[] = {
 	"SerDrive - XTIDE Universal BIOS Serial Drive Server",
@@ -43,7 +43,7 @@ const char *bannerStrings[] = {
 	"Released under GNU GPL v2, with ABSOLUTELY NO WARRANTY",
 	ROM_VERSION_STRING,
 	"",
-	NULL };
+	NULL};
 
 const char *usageStrings[] = {
 	"This is free software, and you are welcome to redistribute it under certain",
@@ -159,7 +159,7 @@ int main(int argc, char* argv[])
 				  a = atol( next );
 				  if( a < 1 )
 				    usage();
-				  sprintf( ComPortBuff, "/dev/ttyS%d", a );
+				  sprintf( ComPortBuff, "/dev/ttyS%ld", a );
 				  ComPort = &ComPortBuff[0];
 				}
 				else

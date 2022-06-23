@@ -282,7 +282,7 @@ void Image::respondInquire( unsigned short *buff, unsigned short originalPortAnd
 		if( comPort )
 			sprintf( speedBuff, " (COM%c/%s)", comPort, baudRate->display );
 		else
-			sprintf( speedBuff, " (%s baud)", shortFileName, baudRate->display );
+			sprintf( speedBuff, " (%s baud)", baudRate->display );
 
 		sprintf( formatBuff, "%.*s%s ", XTIDEBIOS_strModel_Length - strlen(speedBuff), shortFileName, speedBuff );
 	}
